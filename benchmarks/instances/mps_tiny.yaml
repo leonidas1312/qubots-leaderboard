@@ -1,0 +1,7 @@
+# Tiny MPS instance. Industry-standard MPS file format; the same loader
+# also handles MIPLIB instances via `qubots.contrib.miplib.fetch_miplib`.
+
+qubots_schema_version: 1
+problem: ../problems/mps_problem
+instances:
+  - mps_path: mps_tiny.mps

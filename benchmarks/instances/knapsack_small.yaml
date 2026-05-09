@@ -1,0 +1,12 @@
+# Small synthetic 0/1 knapsack instances. The problem repo is bundled at
+# benchmarks/problems/knapsack_milp_problem/ and exposes both `as_milp()`
+# (for HiGHS / CP-SAT) and `evaluate()` / `random_solution()` (for
+# metaheuristics) so structured and blackbox solvers compete on the same
+# instances.
+
+qubots_schema_version: 1
+problem: ../problems/knapsack_milp_problem
+instances:
+  - { n_items: 20, capacity_ratio: 0.35, seed: 1 }
+  - { n_items: 30, capacity_ratio: 0.40, seed: 2 }
+  - { n_items: 40, capacity_ratio: 0.45, seed: 3 }

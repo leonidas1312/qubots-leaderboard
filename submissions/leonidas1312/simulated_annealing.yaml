@@ -1,0 +1,8 @@
+qubots_submission_schema_version: 1
+spec: github:leonidas1312/qubots@master:examples/simulated_annealing_optimizer
+submitter: leonidas1312
+display_name: "Simulated Annealing (300 steps)"
+parameters:
+  steps: 300
+  t0: 1.0
+  cooling: 0.995

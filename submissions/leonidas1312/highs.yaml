@@ -1,0 +1,6 @@
+qubots_submission_schema_version: 1
+spec: github:leonidas1312/qubots@master:examples/highs_optimizer
+submitter: leonidas1312
+display_name: "HiGHS (default)"
+parameters:
+  time_limit_seconds: 30

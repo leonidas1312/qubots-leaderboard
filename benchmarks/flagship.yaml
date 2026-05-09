@@ -1,0 +1,10 @@
+qubots_leaderboard_schema_version: 1
+name: qubots-flagship
+description: Canonical OR benchmarks. Small enough to run in CI minutes, structured + blackbox solvers both compete.
+
+benchmarks:
+  - name: knapsack_small
+    dataset: instances/knapsack_small.yaml
+
+  - name: mps_tiny
+    dataset: instances/mps_tiny.yaml

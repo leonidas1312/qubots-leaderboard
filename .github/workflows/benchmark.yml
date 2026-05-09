@@ -1,0 +1,119 @@
+name: benchmark
+
+on:
+  pull_request:
+    paths:
+      - "submissions/**"
+      - "benchmarks/**"
+      - "scripts/**"
+      - ".github/workflows/benchmark.yml"
+  push:
+    branches: [main]
+  schedule:
+    - cron: "17 4 * * 0"   # weekly: Sundays 04:17 UTC
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+  pull-requests: write
+
+jobs:
+  benchmark:
+    name: Run leaderboard
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+
+    steps:
+      - name: Check out leaderboard repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install qubots + bundled solver dependencies
+        # The flagship submissions all live under leonidas1312/qubots and
+        # share a single dep set. As the leaderboard grows, switch to a
+        # per-submission isolated venv (one matrix job per submission).
+        run: |
+          python -m pip install --upgrade pip
+          pip install "qubots[highs,cpsat]"
+
+      - name: Validate submissions and benchmarks
+        env:
+          QUBOTS_TRUST_REMOTE_CODE: "1"
+        run: |
+          set -euo pipefail
+          python -c "
+          from pathlib import Path
+          from qubots.leaderboard import load_suite, load_submissions_from_dir
+          load_suite('benchmarks/flagship.yaml')
+          subs = load_submissions_from_dir('submissions')
+          assert subs, 'no submissions found'
+          print(f'OK: {len(subs)} submissions resolved')
+          "
+
+      - name: Run leaderboard
+        env:
+          QUBOTS_TRUST_REMOTE_CODE: "1"
+          QUBOTS_SUPPRESS_REMOTE_WARNING: "1"
+        run: python scripts/run_leaderboard.py
+
+      - name: Upload artifacts
+        uses: actions/upload-artifact@v4
+        with:
+          name: leaderboard-results
+          path: |
+            LEADERBOARD.md
+            leaderboard.json
+
+      - name: Comment results on PR
+        if: github.event_name == 'pull_request'
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const fs = require('fs');
+            const md = fs.readFileSync('LEADERBOARD.md', 'utf8');
+            const body = [
+              '### Leaderboard run for this PR',
+              '',
+              md,
+              '',
+              '_This run includes the submissions on this branch. ' +
+              'Results will be re-computed and committed to main on merge._',
+            ].join('\n');
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number: context.issue.number,
+              body,
+            });
+
+      - name: Commit updated leaderboard to main
+        if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+        run: |
+          set -euo pipefail
+          git config user.name "qubots-leaderboard-bot"
+          git config user.email "leaderboard@users.noreply.github.com"
+          git add LEADERBOARD.md leaderboard.json
+          if git diff --cached --quiet; then
+            echo "No leaderboard changes to commit."
+            exit 0
+          fi
+          git commit -m "chore: refresh leaderboard"
+          git push origin HEAD:main
+
+      - name: Commit updated leaderboard on cron
+        if: github.event_name == 'schedule'
+        run: |
+          set -euo pipefail
+          git config user.name "qubots-leaderboard-bot"
+          git config user.email "leaderboard@users.noreply.github.com"
+          git add LEADERBOARD.md leaderboard.json
+          if git diff --cached --quiet; then
+            echo "No leaderboard changes on cron."
+            exit 0
+          fi
+          git commit -m "chore: weekly leaderboard refresh"
+          git push origin HEAD:main
