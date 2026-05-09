@@ -1,0 +1,57 @@
+name: Sync HF Space
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "space/**"
+      - ".github/workflows/sync_space.yml"
+  workflow_dispatch: {}
+
+permissions:
+  contents: read
+
+jobs:
+  sync:
+    name: Mirror space/ to huggingface.co/spaces/leonidas1312/qubots-leaderboard
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out leaderboard repo
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install huggingface_hub
+        run: |
+          python -m pip install --upgrade pip
+          pip install "huggingface_hub>=0.24"
+
+      - name: Push space/ to the Space repo
+        env:
+          HF_TOKEN: ${{ secrets.HF_TOKEN }}
+        run: |
+          if [ -z "$HF_TOKEN" ]; then
+            echo "::error::Missing repo secret HF_TOKEN."
+            echo "Create a write-scoped HF token at https://huggingface.co/settings/tokens"
+            echo "and add it as a secret named HF_TOKEN at"
+            echo "https://github.com/leonidas1312/qubots-leaderboard/settings/secrets/actions"
+            exit 1
+          fi
+
+          python <<'EOF'
+          import os
+          from huggingface_hub import HfApi
+
+          api = HfApi(token=os.environ["HF_TOKEN"])
+          api.upload_folder(
+              folder_path="space",
+              repo_id="leonidas1312/qubots-leaderboard",
+              repo_type="space",
+              commit_message="sync from github main",
+          )
+          print("OK: pushed space/ to huggingface.co/spaces/leonidas1312/qubots-leaderboard")
+          EOF
