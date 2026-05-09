@@ -1,7 +1,7 @@
 {
   "suite_name": "qubots-flagship",
   "suite_description": "Canonical OR benchmarks. Small enough to run in CI minutes, structured + blackbox solvers both compete.",
-  "generated_at": "2026-05-09T12:35:42+00:00",
+  "generated_at": "2026-05-09T12:36:58+00:00",
   "benchmarks": [
     "knapsack_small",
     "mps_tiny"
@@ -11,7 +11,7 @@
       "submission_id": "leonidas1312/CP-SAT (default)",
       "submitter": "leonidas1312",
       "display_name": "CP-SAT (default)",
-      "spec": "github:leonidas1312/qubots@master:examples/cpsat_optimizer",
+      "spec": "github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/cpsat_optimizer",
       "parameters": {
         "time_limit_seconds": 30
       }
@@ -20,7 +20,7 @@
       "submission_id": "leonidas1312/HiGHS (default)",
       "submitter": "leonidas1312",
       "display_name": "HiGHS (default)",
-      "spec": "github:leonidas1312/qubots@master:examples/highs_optimizer",
+      "spec": "github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/highs_optimizer",
       "parameters": {
         "time_limit_seconds": 30
       }
@@ -29,7 +29,7 @@
       "submission_id": "leonidas1312/Simulated Annealing (300 steps)",
       "submitter": "leonidas1312",
       "display_name": "Simulated Annealing (300 steps)",
-      "spec": "github:leonidas1312/qubots@master:examples/simulated_annealing_optimizer",
+      "spec": "github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/simulated_annealing_optimizer",
       "parameters": {
         "steps": 300,
         "t0": 1.0,
@@ -43,10 +43,10 @@
       "submission_id": "leonidas1312/CP-SAT (default)",
       "submitter": "leonidas1312",
       "display_name": "CP-SAT (default)",
-      "spec": "github:leonidas1312/qubots@master:examples/cpsat_optimizer",
+      "spec": "github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/cpsat_optimizer",
       "num_runs": 3,
       "mean_best_value": -344.0,
-      "mean_runtime_seconds": 0.14539903200000026,
+      "mean_runtime_seconds": 0.11296303233333067,
       "success_rate": 1.0,
       "runs": [
         {
@@ -58,7 +58,7 @@
             "seed": 1
           },
           "best_value": -188.0,
-          "runtime_seconds": 0.43094726500000036,
+          "runtime_seconds": 0.33248413900000173,
           "status": "ok"
         },
         {
@@ -70,7 +70,7 @@
             "seed": 2
           },
           "best_value": -326.0,
-          "runtime_seconds": 0.002202628000006257,
+          "runtime_seconds": 0.003221877999976641,
           "status": "ok"
         },
         {
@@ -82,7 +82,7 @@
             "seed": 3
           },
           "best_value": -518.0,
-          "runtime_seconds": 0.0030472029999941697,
+          "runtime_seconds": 0.0031830800000136605,
           "status": "ok"
         }
       ]
@@ -92,10 +92,10 @@
       "submission_id": "leonidas1312/HiGHS (default)",
       "submitter": "leonidas1312",
       "display_name": "HiGHS (default)",
-      "spec": "github:leonidas1312/qubots@master:examples/highs_optimizer",
+      "spec": "github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/highs_optimizer",
       "num_runs": 3,
       "mean_best_value": -344.0,
-      "mean_runtime_seconds": 0.010599929000003764,
+      "mean_runtime_seconds": 0.01272950166666457,
       "success_rate": 1.0,
       "runs": [
         {
@@ -107,7 +107,7 @@
             "seed": 1
           },
           "best_value": -188.0,
-          "runtime_seconds": 0.02110507800000505,
+          "runtime_seconds": 0.025900715000005903,
           "status": "ok"
         },
         {
@@ -119,7 +119,7 @@
             "seed": 2
           },
           "best_value": -326.0,
-          "runtime_seconds": 0.004915377000003218,
+          "runtime_seconds": 0.005499211000000059,
           "status": "ok"
         },
         {
@@ -131,7 +131,7 @@
             "seed": 3
           },
           "best_value": -518.0,
-          "runtime_seconds": 0.0057793320000030235,
+          "runtime_seconds": 0.006788578999987749,
           "status": "ok"
         }
       ]
@@ -141,10 +141,10 @@
       "submission_id": "leonidas1312/Simulated Annealing (300 steps)",
       "submitter": "leonidas1312",
       "display_name": "Simulated Annealing (300 steps)",
-      "spec": "github:leonidas1312/qubots@master:examples/simulated_annealing_optimizer",
+      "spec": "github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/simulated_annealing_optimizer",
       "num_runs": 3,
       "mean_best_value": -249.33333333333334,
-      "mean_runtime_seconds": 0.0017881193333314134,
+      "mean_runtime_seconds": 0.001751307666656506,
       "success_rate": 1.0,
       "runs": [
         {
@@ -156,7 +156,7 @@
             "seed": 1
           },
           "best_value": -117.0,
-          "runtime_seconds": 0.001478468999991378,
+          "runtime_seconds": 0.0014550479999968502,
           "status": "ok"
         },
         {
@@ -168,7 +168,7 @@
             "seed": 2
           },
           "best_value": -237.0,
-          "runtime_seconds": 0.0018423559999973804,
+          "runtime_seconds": 0.001797547999984772,
           "status": "ok"
         },
         {
@@ -180,7 +180,7 @@
             "seed": 3
           },
           "best_value": -394.0,
-          "runtime_seconds": 0.002043533000005482,
+          "runtime_seconds": 0.0020013269999878958,
           "status": "ok"
         }
       ]
@@ -190,10 +190,10 @@
       "submission_id": "leonidas1312/CP-SAT (default)",
       "submitter": "leonidas1312",
       "display_name": "CP-SAT (default)",
-      "spec": "github:leonidas1312/qubots@master:examples/cpsat_optimizer",
+      "spec": "github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/cpsat_optimizer",
       "num_runs": 1,
       "mean_best_value": -25.0,
-      "mean_runtime_seconds": 0.003307656999993469,
+      "mean_runtime_seconds": 0.0030093910000061896,
       "success_rate": 1.0,
       "runs": [
         {
@@ -203,7 +203,7 @@
             "mps_path": "mps_tiny.mps"
           },
           "best_value": -25.0,
-          "runtime_seconds": 0.003307656999993469,
+          "runtime_seconds": 0.0030093910000061896,
           "status": "ok"
         }
       ]
@@ -213,10 +213,10 @@
       "submission_id": "leonidas1312/HiGHS (default)",
       "submitter": "leonidas1312",
       "display_name": "HiGHS (default)",
-      "spec": "github:leonidas1312/qubots@master:examples/highs_optimizer",
+      "spec": "github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/highs_optimizer",
       "num_runs": 1,
       "mean_best_value": -25.0,
-      "mean_runtime_seconds": 0.0005127059999949779,
+      "mean_runtime_seconds": 0.000494823999986238,
       "success_rate": 1.0,
       "runs": [
         {
@@ -226,7 +226,7 @@
             "mps_path": "mps_tiny.mps"
           },
           "best_value": -25.0,
-          "runtime_seconds": 0.0005127059999949779,
+          "runtime_seconds": 0.000494823999986238,
           "status": "ok"
         }
       ]
@@ -236,10 +236,10 @@
       "submission_id": "leonidas1312/Simulated Annealing (300 steps)",
       "submitter": "leonidas1312",
       "display_name": "Simulated Annealing (300 steps)",
-      "spec": "github:leonidas1312/qubots@master:examples/simulated_annealing_optimizer",
+      "spec": "github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/simulated_annealing_optimizer",
       "num_runs": 1,
       "mean_best_value": -22.0,
-      "mean_runtime_seconds": 0.015102628000008167,
+      "mean_runtime_seconds": 0.016263757000018586,
       "success_rate": 1.0,
       "runs": [
         {
@@ -249,7 +249,7 @@
             "mps_path": "mps_tiny.mps"
           },
           "best_value": -22.0,
-          "runtime_seconds": 0.015102628000008167,
+          "runtime_seconds": 0.016263757000018586,
           "status": "ok"
         }
       ]
