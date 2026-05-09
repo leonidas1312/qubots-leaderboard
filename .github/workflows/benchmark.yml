@@ -36,9 +36,11 @@ jobs:
         # The flagship submissions all live under leonidas1312/qubots and
         # share a single dep set. As the leaderboard grows, switch to a
         # per-submission isolated venv (one matrix job per submission).
+        # TODO(after qubots 2.0.0 lands on PyPI): switch back to
+        # `pip install "qubots[highs,cpsat]>=2.0"`.
         run: |
           python -m pip install --upgrade pip
-          pip install "qubots[highs,cpsat]"
+          pip install "qubots[highs,cpsat] @ git+https://github.com/leonidas1312/qubots.git@master"
 
       - name: Validate submissions and benchmarks
         env:
