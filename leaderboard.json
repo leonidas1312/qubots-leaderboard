@@ -1,7 +1,7 @@
 {
   "suite_name": "qubots-flagship",
   "suite_description": "Canonical OR benchmarks. Small enough to run in CI minutes, structured + blackbox solvers both compete.",
-  "generated_at": "2026-05-09T11:45:49+00:00",
+  "generated_at": "2026-05-09T12:35:42+00:00",
   "benchmarks": [
     "knapsack_small",
     "mps_tiny"
@@ -11,7 +11,7 @@
       "submission_id": "leonidas1312/CP-SAT (default)",
       "submitter": "leonidas1312",
       "display_name": "CP-SAT (default)",
-      "spec": "C:/dev/qubots/examples/cpsat_optimizer",
+      "spec": "github:leonidas1312/qubots@master:examples/cpsat_optimizer",
       "parameters": {
         "time_limit_seconds": 30
       }
@@ -20,7 +20,7 @@
       "submission_id": "leonidas1312/HiGHS (default)",
       "submitter": "leonidas1312",
       "display_name": "HiGHS (default)",
-      "spec": "C:/dev/qubots/examples/highs_optimizer",
+      "spec": "github:leonidas1312/qubots@master:examples/highs_optimizer",
       "parameters": {
         "time_limit_seconds": 30
       }
@@ -29,9 +29,11 @@
       "submission_id": "leonidas1312/Simulated Annealing (300 steps)",
       "submitter": "leonidas1312",
       "display_name": "Simulated Annealing (300 steps)",
-      "spec": "C:/dev/qubots/examples/simulated_annealing_optimizer",
+      "spec": "github:leonidas1312/qubots@master:examples/simulated_annealing_optimizer",
       "parameters": {
-        "steps": 300
+        "steps": 300,
+        "t0": 1.0,
+        "cooling": 0.995
       }
     }
   ],
@@ -41,10 +43,10 @@
       "submission_id": "leonidas1312/CP-SAT (default)",
       "submitter": "leonidas1312",
       "display_name": "CP-SAT (default)",
-      "spec": "C:/dev/qubots/examples/cpsat_optimizer",
+      "spec": "github:leonidas1312/qubots@master:examples/cpsat_optimizer",
       "num_runs": 3,
       "mean_best_value": -344.0,
-      "mean_runtime_seconds": 0.17903356666890127,
+      "mean_runtime_seconds": 0.14539903200000026,
       "success_rate": 1.0,
       "runs": [
         {
@@ -56,7 +58,7 @@
             "seed": 1
           },
           "best_value": -188.0,
-          "runtime_seconds": 0.5153824000008171,
+          "runtime_seconds": 0.43094726500000036,
           "status": "ok"
         },
         {
@@ -68,7 +70,7 @@
             "seed": 2
           },
           "best_value": -326.0,
-          "runtime_seconds": 0.015141500000027008,
+          "runtime_seconds": 0.002202628000006257,
           "status": "ok"
         },
         {
@@ -80,7 +82,7 @@
             "seed": 3
           },
           "best_value": -518.0,
-          "runtime_seconds": 0.006576800005859695,
+          "runtime_seconds": 0.0030472029999941697,
           "status": "ok"
         }
       ]
@@ -90,10 +92,10 @@
       "submission_id": "leonidas1312/HiGHS (default)",
       "submitter": "leonidas1312",
       "display_name": "HiGHS (default)",
-      "spec": "C:/dev/qubots/examples/highs_optimizer",
+      "spec": "github:leonidas1312/qubots@master:examples/highs_optimizer",
       "num_runs": 3,
       "mean_best_value": -344.0,
-      "mean_runtime_seconds": 0.02494253333134111,
+      "mean_runtime_seconds": 0.010599929000003764,
       "success_rate": 1.0,
       "runs": [
         {
@@ -105,7 +107,7 @@
             "seed": 1
           },
           "best_value": -188.0,
-          "runtime_seconds": 0.04713320000155363,
+          "runtime_seconds": 0.02110507800000505,
           "status": "ok"
         },
         {
@@ -117,7 +119,7 @@
             "seed": 2
           },
           "best_value": -326.0,
-          "runtime_seconds": 0.013312900002347305,
+          "runtime_seconds": 0.004915377000003218,
           "status": "ok"
         },
         {
@@ -129,7 +131,7 @@
             "seed": 3
           },
           "best_value": -518.0,
-          "runtime_seconds": 0.014381499990122393,
+          "runtime_seconds": 0.0057793320000030235,
           "status": "ok"
         }
       ]
@@ -139,10 +141,10 @@
       "submission_id": "leonidas1312/Simulated Annealing (300 steps)",
       "submitter": "leonidas1312",
       "display_name": "Simulated Annealing (300 steps)",
-      "spec": "C:/dev/qubots/examples/simulated_annealing_optimizer",
+      "spec": "github:leonidas1312/qubots@master:examples/simulated_annealing_optimizer",
       "num_runs": 3,
       "mean_best_value": -249.33333333333334,
-      "mean_runtime_seconds": 0.0021292333355328688,
+      "mean_runtime_seconds": 0.0017881193333314134,
       "success_rate": 1.0,
       "runs": [
         {
@@ -154,7 +156,7 @@
             "seed": 1
           },
           "best_value": -117.0,
-          "runtime_seconds": 0.0017936000076588243,
+          "runtime_seconds": 0.001478468999991378,
           "status": "ok"
         },
         {
@@ -166,7 +168,7 @@
             "seed": 2
           },
           "best_value": -237.0,
-          "runtime_seconds": 0.0021018999977968633,
+          "runtime_seconds": 0.0018423559999973804,
           "status": "ok"
         },
         {
@@ -178,7 +180,7 @@
             "seed": 3
           },
           "best_value": -394.0,
-          "runtime_seconds": 0.002492200001142919,
+          "runtime_seconds": 0.002043533000005482,
           "status": "ok"
         }
       ]
@@ -188,10 +190,10 @@
       "submission_id": "leonidas1312/CP-SAT (default)",
       "submitter": "leonidas1312",
       "display_name": "CP-SAT (default)",
-      "spec": "C:/dev/qubots/examples/cpsat_optimizer",
+      "spec": "github:leonidas1312/qubots@master:examples/cpsat_optimizer",
       "num_runs": 1,
       "mean_best_value": -25.0,
-      "mean_runtime_seconds": 0.012662199995247647,
+      "mean_runtime_seconds": 0.003307656999993469,
       "success_rate": 1.0,
       "runs": [
         {
@@ -201,7 +203,7 @@
             "mps_path": "mps_tiny.mps"
           },
           "best_value": -25.0,
-          "runtime_seconds": 0.012662199995247647,
+          "runtime_seconds": 0.003307656999993469,
           "status": "ok"
         }
       ]
@@ -211,10 +213,10 @@
       "submission_id": "leonidas1312/HiGHS (default)",
       "submitter": "leonidas1312",
       "display_name": "HiGHS (default)",
-      "spec": "C:/dev/qubots/examples/highs_optimizer",
+      "spec": "github:leonidas1312/qubots@master:examples/highs_optimizer",
       "num_runs": 1,
       "mean_best_value": -25.0,
-      "mean_runtime_seconds": 0.000596500001847744,
+      "mean_runtime_seconds": 0.0005127059999949779,
       "success_rate": 1.0,
       "runs": [
         {
@@ -224,7 +226,7 @@
             "mps_path": "mps_tiny.mps"
           },
           "best_value": -25.0,
-          "runtime_seconds": 0.000596500001847744,
+          "runtime_seconds": 0.0005127059999949779,
           "status": "ok"
         }
       ]
@@ -234,10 +236,10 @@
       "submission_id": "leonidas1312/Simulated Annealing (300 steps)",
       "submitter": "leonidas1312",
       "display_name": "Simulated Annealing (300 steps)",
-      "spec": "C:/dev/qubots/examples/simulated_annealing_optimizer",
+      "spec": "github:leonidas1312/qubots@master:examples/simulated_annealing_optimizer",
       "num_runs": 1,
       "mean_best_value": -22.0,
-      "mean_runtime_seconds": 0.041979000001447275,
+      "mean_runtime_seconds": 0.015102628000008167,
       "success_rate": 1.0,
       "runs": [
         {
@@ -247,7 +249,7 @@
             "mps_path": "mps_tiny.mps"
           },
           "best_value": -22.0,
-          "runtime_seconds": 0.041979000001447275,
+          "runtime_seconds": 0.015102628000008167,
           "status": "ok"
         }
       ]

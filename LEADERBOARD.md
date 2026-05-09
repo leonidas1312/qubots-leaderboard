@@ -2,7 +2,7 @@
 
 > Canonical OR benchmarks. Small enough to run in CI minutes, structured + blackbox solvers both compete.
 
-_Generated: 2026-05-09T11:45:49+00:00 (initial seed run from local component paths; will be overwritten on first CI run against github: specs)_
+_Generated: 2026-05-09T12:35:42+00:00_
 
 _3 submission(s) × 2 benchmark(s)_
 
@@ -10,17 +10,17 @@ _3 submission(s) × 2 benchmark(s)_
 
 | rank | submission | submitter | mean_best_value | mean_runtime_s | success |
 |---:|---|---|---:|---:|---:|
-| 1 | HiGHS (default) | leonidas1312 | -344.000000 | 0.024943 | 100% |
-| 2 | CP-SAT (default) | leonidas1312 | -344.000000 | 0.179034 | 100% |
-| 3 | Simulated Annealing (300 steps) | leonidas1312 | -249.333333 | 0.002129 | 100% |
+| 1 | HiGHS (default) | leonidas1312 | -344.000000 | 0.010600 | 100% |
+| 2 | CP-SAT (default) | leonidas1312 | -344.000000 | 0.145399 | 100% |
+| 3 | Simulated Annealing (300 steps) | leonidas1312 | -249.333333 | 0.001788 | 100% |
 
 ## mps_tiny
 
 | rank | submission | submitter | mean_best_value | mean_runtime_s | success |
 |---:|---|---|---:|---:|---:|
-| 1 | HiGHS (default) | leonidas1312 | -25.000000 | 0.000597 | 100% |
-| 2 | CP-SAT (default) | leonidas1312 | -25.000000 | 0.012662 | 100% |
-| 3 | Simulated Annealing (300 steps) | leonidas1312 | -22.000000 | 0.041979 | 100% |
+| 1 | HiGHS (default) | leonidas1312 | -25.000000 | 0.000513 | 100% |
+| 2 | CP-SAT (default) | leonidas1312 | -25.000000 | 0.003308 | 100% |
+| 3 | Simulated Annealing (300 steps) | leonidas1312 | -22.000000 | 0.015103 | 100% |
 
 ## Summary
 
