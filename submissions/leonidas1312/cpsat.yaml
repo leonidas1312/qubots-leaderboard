@@ -1,5 +1,5 @@
 qubots_submission_schema_version: 1
-spec: github:leonidas1312/qubots@master:examples/cpsat_optimizer
+spec: github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/cpsat_optimizer
 submitter: leonidas1312
 display_name: "CP-SAT (default)"
 parameters:
