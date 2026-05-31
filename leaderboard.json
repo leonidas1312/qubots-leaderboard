@@ -1,7 +1,7 @@
 {
   "suite_name": "qubots-flagship",
   "suite_description": "Canonical OR benchmarks. Small enough to run in CI minutes, structured + blackbox solvers both compete.",
-  "generated_at": "2026-05-24T07:29:46+00:00",
+  "generated_at": "2026-05-31T07:51:46+00:00",
   "benchmarks": [
     "knapsack_small",
     "mps_tiny"
@@ -46,7 +46,7 @@
       "spec": "github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/cpsat_optimizer",
       "num_runs": 3,
       "mean_best_value": -344.0,
-      "mean_runtime_seconds": 0.17499516866666673,
+      "mean_runtime_seconds": 0.12650290266666767,
       "success_rate": 1.0,
       "runs": [
         {
@@ -58,7 +58,7 @@
             "seed": 1
           },
           "best_value": -188.0,
-          "runtime_seconds": 0.519133472,
+          "runtime_seconds": 0.3739480570000069,
           "status": "ok"
         },
         {
@@ -70,7 +70,7 @@
             "seed": 2
           },
           "best_value": -326.0,
-          "runtime_seconds": 0.002854726000002472,
+          "runtime_seconds": 0.002788011000006918,
           "status": "ok"
         },
         {
@@ -82,7 +82,7 @@
             "seed": 3
           },
           "best_value": -518.0,
-          "runtime_seconds": 0.002997307999997645,
+          "runtime_seconds": 0.0027726399999892237,
           "status": "ok"
         }
       ]
@@ -95,7 +95,7 @@
       "spec": "github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/highs_optimizer",
       "num_runs": 3,
       "mean_best_value": -344.0,
-      "mean_runtime_seconds": 0.01077064100000058,
+      "mean_runtime_seconds": 0.009471548333370569,
       "success_rate": 1.0,
       "runs": [
         {
@@ -107,7 +107,7 @@
             "seed": 1
           },
           "best_value": -188.0,
-          "runtime_seconds": 0.020538915999999574,
+          "runtime_seconds": 0.018087103000084426,
           "status": "ok"
         },
         {
@@ -119,7 +119,7 @@
             "seed": 2
           },
           "best_value": -326.0,
-          "runtime_seconds": 0.0053755420000030085,
+          "runtime_seconds": 0.004790035000041826,
           "status": "ok"
         },
         {
@@ -131,7 +131,7 @@
             "seed": 3
           },
           "best_value": -518.0,
-          "runtime_seconds": 0.006397464999999158,
+          "runtime_seconds": 0.005537506999985453,
           "status": "ok"
         }
       ]
@@ -144,7 +144,7 @@
       "spec": "github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/simulated_annealing_optimizer",
       "num_runs": 3,
       "mean_best_value": -249.33333333333334,
-      "mean_runtime_seconds": 0.001968805333331621,
+      "mean_runtime_seconds": 0.0018104763333136968,
       "success_rate": 1.0,
       "runs": [
         {
@@ -156,7 +156,7 @@
             "seed": 1
           },
           "best_value": -117.0,
-          "runtime_seconds": 0.0017075259999970172,
+          "runtime_seconds": 0.0014694249999820386,
           "status": "ok"
         },
         {
@@ -168,7 +168,7 @@
             "seed": 2
           },
           "best_value": -237.0,
-          "runtime_seconds": 0.0019626939999994875,
+          "runtime_seconds": 0.0019276780000154758,
           "status": "ok"
         },
         {
@@ -180,7 +180,7 @@
             "seed": 3
           },
           "best_value": -394.0,
-          "runtime_seconds": 0.0022361959999983583,
+          "runtime_seconds": 0.002034325999943576,
           "status": "ok"
         }
       ]
@@ -193,7 +193,7 @@
       "spec": "github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/cpsat_optimizer",
       "num_runs": 1,
       "mean_best_value": -25.0,
-      "mean_runtime_seconds": 0.002823544999998262,
+      "mean_runtime_seconds": 0.0023663230000465774,
       "success_rate": 1.0,
       "runs": [
         {
@@ -203,7 +203,7 @@
             "mps_path": "mps_tiny.mps"
           },
           "best_value": -25.0,
-          "runtime_seconds": 0.002823544999998262,
+          "runtime_seconds": 0.0023663230000465774,
           "status": "ok"
         }
       ]
@@ -216,7 +216,7 @@
       "spec": "github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/highs_optimizer",
       "num_runs": 1,
       "mean_best_value": -25.0,
-      "mean_runtime_seconds": 0.00043945299999847975,
+      "mean_runtime_seconds": 0.0004245400000399968,
       "success_rate": 1.0,
       "runs": [
         {
@@ -226,7 +226,7 @@
             "mps_path": "mps_tiny.mps"
           },
           "best_value": -25.0,
-          "runtime_seconds": 0.00043945299999847975,
+          "runtime_seconds": 0.0004245400000399968,
           "status": "ok"
         }
       ]
@@ -239,7 +239,7 @@
       "spec": "github:leonidas1312/qubots@32d261c35c599b2e5f949360b6a7f8d357f725a4:examples/simulated_annealing_optimizer",
       "num_runs": 1,
       "mean_best_value": -22.0,
-      "mean_runtime_seconds": 0.01721812899999975,
+      "mean_runtime_seconds": 0.01645438399998511,
       "success_rate": 1.0,
       "runs": [
         {
@@ -249,7 +249,7 @@
             "mps_path": "mps_tiny.mps"
           },
           "best_value": -22.0,
-          "runtime_seconds": 0.01721812899999975,
+          "runtime_seconds": 0.01645438399998511,
           "status": "ok"
         }
       ]
